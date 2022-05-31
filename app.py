@@ -1,4 +1,5 @@
 import sqlite3 as sqt
+import os
 from bottle import route,template
 
 conn = sqt.connect("hazChem.db")
