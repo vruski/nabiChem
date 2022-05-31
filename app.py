@@ -1,4 +1,5 @@
 import sqlite3 as sqt
+from bottle import route,template
 
 conn = sqt.connect("hazChem.db")
 c = conn.cursor()
@@ -14,3 +15,9 @@ def insertNewVal(p,q,r,s):
 
 conn.commit()
 conn.close()
+
+@route('/')
+def index():
+    return template('index.html')
+
+run(host='https://nabichem.herokuapp.com/',port='8080',debug='True',reloader='True')
