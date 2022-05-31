@@ -20,4 +20,8 @@ conn.close()
 def index():
     return template('index.html')
 
-run(host='https://nabichem.herokuapp.com/',port='8080',debug='True',reloader='True')
+
+if os.environ.get('APP_LOCATION') == 'heroku':
+    run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+else:
+    run(host='localhost', port=8080, debug=True) 
