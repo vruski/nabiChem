@@ -1,0 +1,30 @@
+#html{
+    margin-top: 250px;
+    text-align: center;
+    background-image: url('./07.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    font-family: Sans-Serif;
+    font-style: italic;
+}
+h1{
+    color: yellow;
+}
+
+#box{
+    padding: 1px;
+    border-radius: 10px;
+    color: 252525;
+}
+
+#submit{
+    margin: 5px;
+    border-radius: 10px;
+    color:rgb(37,0,37);
+}
+
+footer{
+    margin: 250px;
+    color: white;
+}
