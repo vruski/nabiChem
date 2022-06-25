@@ -86,7 +86,13 @@ def insertRequest():
 #####INSERT NEW VALUES END HERE####
 
 
-
+@route('/all')
+def list_all():
+    c.execute("SELECT * FROM compounds")
+    result = c.fetchall()
+    print(result)
+    op = template('all.html',rows=result)
+    return op
 
 
 

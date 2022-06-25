@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>List all</title>
+        
+    </head>
+    <body>
+        <p>All products are listed as follows:</p>
+        <br>
+        <br>
+            <table border="1">
+                <tr>
+                    <td>S.No</td>
+                    <td>Product</td>
+                    <td>Weight</td>
+                    <td>Price</td>
+                    <td>MRP</td>
+                </tr>
+            %for row in rows:
+              <tr>
+              %for col in row:
+                <td>{{col}}</td>
+              %end
+              </tr>
+            %end
+            </table>
+    </body>
+</html>
